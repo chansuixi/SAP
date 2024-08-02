@@ -1,0 +1,1 @@
+[{"inputs": [["2cdbc06c0b7bbcf48a94e6866d80560510354f7c", "24000000000"]], "function": {"types": ["address", "uint256"], "method": "transfer", "graph": "", "param": "['mapping\\tbalances']"}}]

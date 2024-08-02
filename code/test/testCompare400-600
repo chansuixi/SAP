@@ -1,0 +1,893 @@
+CF:184s SG:145s Ours:43s
+/Users/yangkaixuan/opt/anaconda3/envs/py38/bin/python /Users/yangkaixuan/Downloads/SmartGift-main/code/SmartGift.py
+/Users/yangkaixuan/opt/anaconda3/envs/py38/lib/python3.8/site-packages/gensim/utils.py:35: UserWarning: The NumPy module was reloaded (imported a second time). This can in some cases result in small but subtle issues and is discouraged.
+  import numpy as np
+{"name": "setTransferAgent", "inputs": [{"name": "addr", "type": "address"}, {"name": "state", "type": "bool"}], "graph": ""}
+trim size: 5
+second level
+here top k: 5
+{"name": "mintingFinished", "inputs": [], "graph": ""}
+{"name": "name", "inputs": [], "graph": ""}
+{"name": "approve", "inputs": [{"name": "_spender", "type": "address"}, {"name": "_value", "type": "uint256"}], "graph": ""}
+trim size: 5
+first level
+here top k: 5
+{"name": "totalSupply", "inputs": [], "graph": ""}
+{"name": "transferFrom", "inputs": [{"name": "_from", "type": "address"}, {"name": "_to", "type": "address"}, {"name": "_value", "type": "uint256"}], "graph": ""}
+trim size: 5
+first level
+here top k: 5
+{"name": "setReleaseAgent", "inputs": [{"name": "addr", "type": "address"}], "graph": ""}
+trim size: 5
+first level
+here top k: 5
+{"name": "decimals", "inputs": [], "graph": ""}
+{"name": "mint", "inputs": [{"name": "receiver", "type": "address"}, {"name": "amount", "type": "uint256"}], "graph": ""}
+trim size: 5
+first level
+here top k: 5
+{"name": "mintAgents", "inputs": [{"name": "", "type": "address"}], "graph": ""}
+trim size: 5
+first level
+here top k: 5
+{"name": "setMintAgent", "inputs": [{"name": "addr", "type": "address"}, {"name": "state", "type": "bool"}], "graph": ""}
+trim size: 5
+second level
+here top k: 5
+{"name": "upgrade", "inputs": [{"name": "value", "type": "uint256"}], "graph": ""}
+trim size: 5
+first level
+here top k: 5
+{"name": "setTokenInformation", "inputs": [{"name": "_name", "type": "string"}, {"name": "_symbol", "type": "string"}], "graph": ""}
+trim size: 5
+second level
+here top k: 5
+{"name": "upgradeAgent", "inputs": [], "graph": ""}
+{"name": "releaseTokenTransfer", "inputs": [], "graph": ""}
+{"name": "upgradeMaster", "inputs": [], "graph": ""}
+{"name": "balanceOf", "inputs": [{"name": "_owner", "type": "address"}], "graph": ""}
+trim size: 5
+first level
+here top k: 5
+{"name": "getUpgradeState", "inputs": [], "graph": ""}
+{"name": "transferAgents", "inputs": [{"name": "", "type": "address"}], "graph": ""}
+trim size: 5
+first level
+here top k: 5
+{"name": "owner", "inputs": [], "graph": ""}
+{"name": "symbol", "inputs": [], "graph": ""}
+{"name": "released", "inputs": [], "graph": ""}
+{"name": "canUpgrade", "inputs": [], "graph": ""}
+{"name": "safeSub", "inputs": [{"name": "a", "type": "uint256"}, {"name": "b", "type": "uint256"}], "graph": ""}
+trim size: 5
+first level
+here top k: 5
+{"name": "transfer", "inputs": [{"name": "_to", "type": "address"}, {"name": "_value", "type": "uint256"}], "graph": ""}
+trim size: 5
+first level
+here top k: 5
+{"name": "addApproval", "inputs": [{"name": "_spender", "type": "address"}, {"name": "_addedValue", "type": "uint256"}], "graph": ""}
+trim size: 5
+first level
+here top k: 5
+{"name": "totalUpgraded", "inputs": [], "graph": ""}
+{"name": "safeMul", "inputs": [{"name": "a", "type": "uint256"}, {"name": "b", "type": "uint256"}], "graph": ""}
+trim size: 5
+first level
+here top k: 5
+{"name": "releaseAgent", "inputs": [], "graph": ""}
+{"name": "setUpgradeAgent", "inputs": [{"name": "agent", "type": "address"}], "graph": ""}
+trim size: 5
+first level
+here top k: 5
+{"name": "allowance", "inputs": [{"name": "_owner", "type": "address"}, {"name": "_spender", "type": "address"}], "graph": ""}
+trim size: 5
+second level
+here top k: 5
+{"name": "subApproval", "inputs": [{"name": "_spender", "type": "address"}, {"name": "_subtractedValue", "type": "uint256"}], "graph": ""}
+trim size: 5
+first level
+here top k: 5
+{"name": "safeAdd", "inputs": [{"name": "a", "type": "uint256"}, {"name": "b", "type": "uint256"}], "graph": ""}
+trim size: 5
+first level
+here top k: 5
+{"name": "transferOwnership", "inputs": [{"name": "newOwner", "type": "address"}], "graph": ""}
+trim size: 5
+first level
+here top k: 5
+{"name": "setUpgradeMaster", "inputs": [{"name": "master", "type": "address"}], "graph": ""}
+trim size: 5
+first level
+here top k: 5
+time cost is:43 seconds
+
+Process finished with exit code 0
+
+/Users/yangkaixuan/opt/anaconda3/envs/py38/bin/python /Users/yangkaixuan/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Paper/SmartGift-order/code/SmartGift.py
+/Users/yangkaixuan/opt/anaconda3/envs/py38/lib/python3.8/site-packages/gensim/utils.py:35: UserWarning: The NumPy module was reloaded (imported a second time). This can in some cases result in small but subtle issues and is discouraged.
+  import numpy as np
+{"name": "setTransferAgent", "inputs": [{"name": "addr", "type": "address"}, {"name": "state", "type": "bool"}]}
+trim size: 5
+first level
+here top k: 5
+{"name": "mintingFinished", "inputs": []}
+{"name": "name", "inputs": []}
+{"name": "approve", "inputs": [{"name": "_spender", "type": "address"}, {"name": "_value", "type": "uint256"}]}
+trim size: 5
+first level
+here top k: 5
+{"name": "totalSupply", "inputs": []}
+{"name": "transferFrom", "inputs": [{"name": "_from", "type": "address"}, {"name": "_to", "type": "address"}, {"name": "_value", "type": "uint256"}]}
+trim size: 5
+first level
+here top k: 5
+{"name": "setReleaseAgent", "inputs": [{"name": "addr", "type": "address"}]}
+trim size: 5
+first level
+here top k: 5
+{"name": "decimals", "inputs": []}
+{"name": "mint", "inputs": [{"name": "receiver", "type": "address"}, {"name": "amount", "type": "uint256"}]}
+trim size: 5
+first level
+here top k: 5
+{"name": "mintAgents", "inputs": [{"name": "", "type": "address"}]}
+trim size: 5
+first level
+here top k: 5
+{"name": "setMintAgent", "inputs": [{"name": "addr", "type": "address"}, {"name": "state", "type": "bool"}]}
+trim size: 5
+first level
+here top k: 5
+{"name": "upgrade", "inputs": [{"name": "value", "type": "uint256"}]}
+trim size: 5
+first level
+here top k: 5
+{"name": "setTokenInformation", "inputs": [{"name": "_name", "type": "string"}, {"name": "_symbol", "type": "string"}]}
+trim size: 5
+first level
+here top k: 5
+{"name": "upgradeAgent", "inputs": []}
+{"name": "releaseTokenTransfer", "inputs": []}
+{"name": "upgradeMaster", "inputs": []}
+{"name": "balanceOf", "inputs": [{"name": "_owner", "type": "address"}]}
+trim size: 5
+first level
+here top k: 5
+{"name": "getUpgradeState", "inputs": []}
+{"name": "transferAgents", "inputs": [{"name": "", "type": "address"}]}
+trim size: 5
+first level
+here top k: 5
+{"name": "owner", "inputs": []}
+{"name": "symbol", "inputs": []}
+{"name": "released", "inputs": []}
+{"name": "canUpgrade", "inputs": []}
+{"name": "safeSub", "inputs": [{"name": "a", "type": "uint256"}, {"name": "b", "type": "uint256"}]}
+trim size: 5
+first level
+here top k: 5
+{"name": "transfer", "inputs": [{"name": "_to", "type": "address"}, {"name": "_value", "type": "uint256"}]}
+trim size: 5
+first level
+here top k: 5
+{"name": "addApproval", "inputs": [{"name": "_spender", "type": "address"}, {"name": "_addedValue", "type": "uint256"}]}
+trim size: 5
+first level
+here top k: 5
+{"name": "totalUpgraded", "inputs": []}
+{"name": "safeMul", "inputs": [{"name": "a", "type": "uint256"}, {"name": "b", "type": "uint256"}]}
+trim size: 5
+first level
+here top k: 5
+{"name": "releaseAgent", "inputs": []}
+{"name": "setUpgradeAgent", "inputs": [{"name": "agent", "type": "address"}]}
+trim size: 5
+first level
+here top k: 5
+{"name": "allowance", "inputs": [{"name": "_owner", "type": "address"}, {"name": "_spender", "type": "address"}]}
+trim size: 5
+first level
+here top k: 5
+{"name": "subApproval", "inputs": [{"name": "_spender", "type": "address"}, {"name": "_subtractedValue", "type": "uint256"}]}
+trim size: 5
+first level
+here top k: 5
+{"name": "safeAdd", "inputs": [{"name": "a", "type": "uint256"}, {"name": "b", "type": "uint256"}]}
+trim size: 5
+first level
+here top k: 5
+{"name": "transferOwnership", "inputs": [{"name": "newOwner", "type": "address"}]}
+trim size: 5
+first level
+here top k: 5
+{"name": "setUpgradeMaster", "inputs": [{"name": "master", "type": "address"}]}
+trim size: 5
+first level
+here top k: 5
+time cost is:145 seconds
+
+Process finished with exit code 0
+
+CF:227s SG:200s Ours:87s
+/Users/yangkaixuan/opt/anaconda3/envs/py38/bin/python /Users/yangkaixuan/Downloads/SmartGift-main/code/SmartGift.py
+/Users/yangkaixuan/opt/anaconda3/envs/py38/lib/python3.8/site-packages/gensim/utils.py:35: UserWarning: The NumPy module was reloaded (imported a second time). This can in some cases result in small but subtle issues and is discouraged.
+  import numpy as np
+{"name": "owners", "inputs": [{"name": "", "type": "uint256"}], "graph": ""}
+trim size: 5
+first level
+here top k: 5
+{"name": "removeOwner", "inputs": [{"name": "owner", "type": "address"}], "graph": ""}
+trim size: 5
+first level
+here top k: 5
+{"name": "revokeConfirmation", "inputs": [{"name": "transactionId", "type": "uint256"}], "graph": ""}
+trim size: 5
+first level
+here top k: 5
+{"name": "isOwner", "inputs": [{"name": "", "type": "address"}], "graph": ""}
+trim size: 5
+first level
+here top k: 5
+{"name": "confirmations", "inputs": [{"name": "", "type": "uint256"}, {"name": "", "type": "address"}], "graph": ""}
+trim size: 5
+first level
+here top k: 5
+{"name": "getTransactionCount", "inputs": [{"name": "pending", "type": "bool"}, {"name": "executed", "type": "bool"}], "graph": ""}
+trim size: 5
+fourth_level
+here top k: 5
+{"name": "addOwner", "inputs": [{"name": "owner", "type": "address"}], "graph": ""}
+trim size: 5
+first level
+here top k: 5
+{"name": "isConfirmed", "inputs": [{"name": "transactionId", "type": "uint256"}], "graph": ""}
+trim size: 5
+first level
+here top k: 5
+{"name": "getConfirmationCount", "inputs": [{"name": "transactionId", "type": "uint256"}], "graph": ""}
+trim size: 5
+first level
+here top k: 5
+{"name": "owner", "inputs": [], "graph": ""}
+{"name": "transactions", "inputs": [{"name": "", "type": "uint256"}], "graph": ""}
+trim size: 5
+first level
+here top k: 5
+{"name": "getOwners", "inputs": [], "graph": ""}
+{"name": "getTransactionIds", "inputs": [{"name": "from", "type": "uint256"}, {"name": "to", "type": "uint256"}, {"name": "pending", "type": "bool"}, {"name": "executed", "type": "bool"}], "graph": ""}
+trim size: 5
+fourth_level
+here top k: 5
+{"name": "getConfirmations", "inputs": [{"name": "transactionId", "type": "uint256"}], "graph": ""}
+trim size: 5
+first level
+here top k: 5
+{"name": "transactionCount", "inputs": [], "graph": ""}
+{"name": "changeRequirement", "inputs": [{"name": "_required", "type": "uint256"}], "graph": ""}
+trim size: 5
+first level
+here top k: 5
+{"name": "confirmTransaction", "inputs": [{"name": "transactionId", "type": "uint256"}], "graph": ""}
+trim size: 5
+first level
+here top k: 5
+{"name": "submitTransaction", "inputs": [{"name": "destination", "type": "address"}, {"name": "value", "type": "uint256"}, {"name": "data", "type": "bytes"}], "graph": ""}
+trim size: 5
+second level
+here top k: 5
+{"name": "MAX_OWNER_COUNT", "inputs": [], "graph": ""}
+{"name": "required", "inputs": [], "graph": ""}
+{"name": "replaceOwner", "inputs": [{"name": "owner", "type": "address"}, {"name": "newOwner", "type": "address"}], "graph": ""}
+trim size: 5
+second level
+here top k: 5
+{"name": "executeTransaction", "inputs": [{"name": "transactionId", "type": "uint256"}], "graph": ""}
+trim size: 5
+first level
+here top k: 5
+{"name": "transferOwnership", "inputs": [{"name": "newOwner", "type": "address"}], "graph": ""}
+trim size: 5
+first level
+here top k: 5
+time cost is:87 seconds
+
+Process finished with exit code 0
+
+/Users/yangkaixuan/opt/anaconda3/envs/py38/bin/python /Users/yangkaixuan/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Paper/SmartGift-order/code/SmartGift.py
+/Users/yangkaixuan/opt/anaconda3/envs/py38/lib/python3.8/site-packages/gensim/utils.py:35: UserWarning: The NumPy module was reloaded (imported a second time). This can in some cases result in small but subtle issues and is discouraged.
+  import numpy as np
+{"name": "owners", "inputs": [{"name": "", "type": "uint256"}]}
+trim size: 5
+first level
+here top k: 5
+{"name": "removeOwner", "inputs": [{"name": "owner", "type": "address"}]}
+trim size: 5
+first level
+here top k: 5
+{"name": "revokeConfirmation", "inputs": [{"name": "transactionId", "type": "uint256"}]}
+trim size: 5
+first level
+here top k: 5
+{"name": "isOwner", "inputs": [{"name": "", "type": "address"}]}
+trim size: 5
+first level
+here top k: 5
+{"name": "confirmations", "inputs": [{"name": "", "type": "uint256"}, {"name": "", "type": "address"}]}
+trim size: 5
+first level
+here top k: 5
+{"name": "getTransactionCount", "inputs": [{"name": "pending", "type": "bool"}, {"name": "executed", "type": "bool"}]}
+trim size: 5
+third level
+here top k: 5
+{"name": "addOwner", "inputs": [{"name": "owner", "type": "address"}]}
+trim size: 5
+first level
+here top k: 5
+{"name": "isConfirmed", "inputs": [{"name": "transactionId", "type": "uint256"}]}
+trim size: 5
+first level
+here top k: 5
+{"name": "getConfirmationCount", "inputs": [{"name": "transactionId", "type": "uint256"}]}
+trim size: 5
+first level
+here top k: 5
+{"name": "owner", "inputs": []}
+{"name": "transactions", "inputs": [{"name": "", "type": "uint256"}]}
+trim size: 5
+first level
+here top k: 5
+{"name": "getOwners", "inputs": []}
+{"name": "getTransactionIds", "inputs": [{"name": "from", "type": "uint256"}, {"name": "to", "type": "uint256"}, {"name": "pending", "type": "bool"}, {"name": "executed", "type": "bool"}]}
+trim size: 5
+third level
+here top k: 5
+{"name": "getConfirmations", "inputs": [{"name": "transactionId", "type": "uint256"}]}
+trim size: 5
+first level
+here top k: 5
+{"name": "transactionCount", "inputs": []}
+{"name": "changeRequirement", "inputs": [{"name": "_required", "type": "uint256"}]}
+trim size: 5
+first level
+here top k: 5
+{"name": "confirmTransaction", "inputs": [{"name": "transactionId", "type": "uint256"}]}
+trim size: 5
+first level
+here top k: 5
+{"name": "submitTransaction", "inputs": [{"name": "destination", "type": "address"}, {"name": "value", "type": "uint256"}, {"name": "data", "type": "bytes"}]}
+trim size: 5
+first level
+here top k: 5
+{"name": "MAX_OWNER_COUNT", "inputs": []}
+{"name": "required", "inputs": []}
+{"name": "replaceOwner", "inputs": [{"name": "owner", "type": "address"}, {"name": "newOwner", "type": "address"}]}
+trim size: 5
+first level
+here top k: 5
+{"name": "executeTransaction", "inputs": [{"name": "transactionId", "type": "uint256"}]}
+trim size: 5
+first level
+here top k: 5
+{"name": "transferOwnership", "inputs": [{"name": "newOwner", "type": "address"}]}
+trim size: 5
+first level
+here top k: 5
+time cost is:200 seconds
+
+Process finished with exit code 0
+
+CF:197s SG:172s Ours:44s
+/Users/yangkaixuan/opt/anaconda3/envs/py38/bin/python /Users/yangkaixuan/Downloads/SmartGift-main/code/SmartGift.py
+/Users/yangkaixuan/opt/anaconda3/envs/py38/lib/python3.8/site-packages/gensim/utils.py:35: UserWarning: The NumPy module was reloaded (imported a second time). This can in some cases result in small but subtle issues and is discouraged.
+  import numpy as np
+{"name": "setTransferAgent", "inputs": [{"name": "addr", "type": "address"}, {"name": "state", "type": "bool"}], "graph": ""}
+trim size: 5
+second level
+here top k: 5
+{"name": "mintingFinished", "inputs": [], "graph": ""}
+{"name": "name", "inputs": [], "graph": ""}
+{"name": "approve", "inputs": [{"name": "_spender", "type": "address"}, {"name": "_value", "type": "uint256"}], "graph": ""}
+trim size: 5
+first level
+here top k: 5
+{"name": "totalSupply", "inputs": [], "graph": ""}
+{"name": "transferFrom", "inputs": [{"name": "_from", "type": "address"}, {"name": "_to", "type": "address"}, {"name": "_value", "type": "uint256"}], "graph": ""}
+trim size: 5
+first level
+here top k: 5
+{"name": "setReleaseAgent", "inputs": [{"name": "addr", "type": "address"}], "graph": ""}
+trim size: 5
+first level
+here top k: 5
+{"name": "decimals", "inputs": [], "graph": ""}
+{"name": "getReservedTokensListValInTokens", "inputs": [{"name": "addr", "type": "address"}], "graph": ""}
+trim size: 5
+first level
+here top k: 5
+{"name": "minCap", "inputs": [], "graph": ""}
+{"name": "mint", "inputs": [{"name": "receiver", "type": "address"}, {"name": "amount", "type": "uint256"}], "graph": ""}
+trim size: 5
+first level
+here top k: 5
+{"name": "mintAgents", "inputs": [{"name": "", "type": "address"}], "graph": ""}
+trim size: 5
+first level
+here top k: 5
+{"name": "setMintAgent", "inputs": [{"name": "addr", "type": "address"}, {"name": "state", "type": "bool"}], "graph": ""}
+trim size: 5
+second level
+here top k: 5
+{"name": "upgrade", "inputs": [{"name": "value", "type": "uint256"}], "graph": ""}
+trim size: 5
+first level
+here top k: 5
+{"name": "setTokenInformation", "inputs": [{"name": "_name", "type": "string"}, {"name": "_symbol", "type": "string"}], "graph": ""}
+trim size: 5
+second level
+here top k: 5
+{"name": "reservedTokensList", "inputs": [{"name": "", "type": "address"}], "graph": ""}
+trim size: 5
+first level
+here top k: 5
+{"name": "upgradeAgent", "inputs": [], "graph": ""}
+{"name": "releaseTokenTransfer", "inputs": [], "graph": ""}
+{"name": "upgradeMaster", "inputs": [], "graph": ""}
+{"name": "balanceOf", "inputs": [{"name": "_owner", "type": "address"}], "graph": ""}
+trim size: 5
+first level
+here top k: 5
+{"name": "reservedTokensDestinations", "inputs": [{"name": "", "type": "uint256"}], "graph": ""}
+trim size: 5
+first level
+here top k: 5
+{"name": "getReservedTokensListValInPercentage", "inputs": [{"name": "addr", "type": "address"}], "graph": ""}
+trim size: 5
+first level
+here top k: 5
+{"name": "getUpgradeState", "inputs": [], "graph": ""}
+{"name": "transferAgents", "inputs": [{"name": "", "type": "address"}], "graph": ""}
+trim size: 5
+first level
+here top k: 5
+{"name": "owner", "inputs": [], "graph": ""}
+{"name": "symbol", "inputs": [], "graph": ""}
+{"name": "released", "inputs": [], "graph": ""}
+{"name": "canUpgrade", "inputs": [], "graph": ""}
+{"name": "transfer", "inputs": [{"name": "_to", "type": "address"}, {"name": "_value", "type": "uint256"}], "graph": ""}
+trim size: 5
+first level
+here top k: 5
+{"name": "setReservedTokensListMultiple", "inputs": [{"name": "addrs", "type": "address[]"}, {"name": "inTokens", "type": "uint256[]"}, {"name": "inPercentage", "type": "uint256[]"}], "graph": ""}
+trim size: 5
+first level
+here top k: 5
+{"name": "reservedTokensDestinationsLen", "inputs": [], "graph": ""}
+{"name": "totalUpgraded", "inputs": [], "graph": ""}
+{"name": "releaseAgent", "inputs": [], "graph": ""}
+{"name": "setUpgradeAgent", "inputs": [{"name": "agent", "type": "address"}], "graph": ""}
+trim size: 5
+first level
+here top k: 5
+{"name": "allowance", "inputs": [{"name": "_owner", "type": "address"}, {"name": "_spender", "type": "address"}], "graph": ""}
+trim size: 5
+second level
+here top k: 5
+{"name": "isToken", "inputs": [], "graph": ""}
+{"name": "transferOwnership", "inputs": [{"name": "newOwner", "type": "address"}], "graph": ""}
+trim size: 5
+first level
+here top k: 5
+{"name": "setReservedTokensList", "inputs": [{"name": "addr", "type": "address"}, {"name": "inTokens", "type": "uint256"}, {"name": "inPercentage", "type": "uint256"}], "graph": ""}
+trim size: 5
+first level
+here top k: 5
+{"name": "setUpgradeMaster", "inputs": [{"name": "master", "type": "address"}], "graph": ""}
+trim size: 5
+first level
+here top k: 5
+time cost is:44 seconds
+
+Process finished with exit code 0
+/Users/yangkaixuan/opt/anaconda3/envs/py38/bin/python /Users/yangkaixuan/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Paper/SmartGift-order/code/SmartGift.py
+/Users/yangkaixuan/opt/anaconda3/envs/py38/lib/python3.8/site-packages/gensim/utils.py:35: UserWarning: The NumPy module was reloaded (imported a second time). This can in some cases result in small but subtle issues and is discouraged.
+  import numpy as np
+{"name": "setTransferAgent", "inputs": [{"name": "addr", "type": "address"}, {"name": "state", "type": "bool"}]}
+trim size: 5
+first level
+here top k: 5
+{"name": "mintingFinished", "inputs": []}
+{"name": "name", "inputs": []}
+{"name": "approve", "inputs": [{"name": "_spender", "type": "address"}, {"name": "_value", "type": "uint256"}]}
+trim size: 5
+first level
+here top k: 5
+{"name": "totalSupply", "inputs": []}
+{"name": "transferFrom", "inputs": [{"name": "_from", "type": "address"}, {"name": "_to", "type": "address"}, {"name": "_value", "type": "uint256"}]}
+trim size: 5
+first level
+here top k: 5
+{"name": "setReleaseAgent", "inputs": [{"name": "addr", "type": "address"}]}
+trim size: 5
+first level
+here top k: 5
+{"name": "decimals", "inputs": []}
+{"name": "getReservedTokensListValInTokens", "inputs": [{"name": "addr", "type": "address"}]}
+trim size: 5
+first level
+here top k: 5
+{"name": "minCap", "inputs": []}
+{"name": "mint", "inputs": [{"name": "receiver", "type": "address"}, {"name": "amount", "type": "uint256"}]}
+trim size: 5
+first level
+here top k: 5
+{"name": "mintAgents", "inputs": [{"name": "", "type": "address"}]}
+trim size: 5
+first level
+here top k: 5
+{"name": "setMintAgent", "inputs": [{"name": "addr", "type": "address"}, {"name": "state", "type": "bool"}]}
+trim size: 5
+first level
+here top k: 5
+{"name": "upgrade", "inputs": [{"name": "value", "type": "uint256"}]}
+trim size: 5
+first level
+here top k: 5
+{"name": "setTokenInformation", "inputs": [{"name": "_name", "type": "string"}, {"name": "_symbol", "type": "string"}]}
+trim size: 5
+first level
+here top k: 5
+{"name": "reservedTokensList", "inputs": [{"name": "", "type": "address"}]}
+trim size: 5
+first level
+here top k: 5
+{"name": "upgradeAgent", "inputs": []}
+{"name": "releaseTokenTransfer", "inputs": []}
+{"name": "upgradeMaster", "inputs": []}
+{"name": "balanceOf", "inputs": [{"name": "_owner", "type": "address"}]}
+trim size: 5
+first level
+here top k: 5
+{"name": "reservedTokensDestinations", "inputs": [{"name": "", "type": "uint256"}]}
+trim size: 5
+first level
+here top k: 5
+{"name": "getReservedTokensListValInPercentage", "inputs": [{"name": "addr", "type": "address"}]}
+trim size: 5
+first level
+here top k: 5
+{"name": "getUpgradeState", "inputs": []}
+{"name": "transferAgents", "inputs": [{"name": "", "type": "address"}]}
+trim size: 5
+first level
+here top k: 5
+{"name": "owner", "inputs": []}
+{"name": "symbol", "inputs": []}
+{"name": "released", "inputs": []}
+{"name": "canUpgrade", "inputs": []}
+{"name": "transfer", "inputs": [{"name": "_to", "type": "address"}, {"name": "_value", "type": "uint256"}]}
+trim size: 5
+first level
+here top k: 5
+{"name": "setReservedTokensListMultiple", "inputs": [{"name": "addrs", "type": "address[]"}, {"name": "inTokens", "type": "uint256[]"}, {"name": "inPercentage", "type": "uint256[]"}]}
+trim size: 5
+first level
+here top k: 5
+{"name": "reservedTokensDestinationsLen", "inputs": []}
+{"name": "totalUpgraded", "inputs": []}
+{"name": "releaseAgent", "inputs": []}
+{"name": "setUpgradeAgent", "inputs": [{"name": "agent", "type": "address"}]}
+trim size: 5
+first level
+here top k: 5
+{"name": "allowance", "inputs": [{"name": "_owner", "type": "address"}, {"name": "_spender", "type": "address"}]}
+trim size: 5
+first level
+here top k: 5
+{"name": "isToken", "inputs": []}
+{"name": "transferOwnership", "inputs": [{"name": "newOwner", "type": "address"}]}
+trim size: 5
+first level
+here top k: 5
+{"name": "setReservedTokensList", "inputs": [{"name": "addr", "type": "address"}, {"name": "inTokens", "type": "uint256"}, {"name": "inPercentage", "type": "uint256"}]}
+trim size: 5
+first level
+here top k: 5
+{"name": "setUpgradeMaster", "inputs": [{"name": "master", "type": "address"}]}
+trim size: 5
+first level
+here top k: 5
+time cost is:172 seconds
+
+Process finished with exit code 0
+
+CF:164s SG:61s Ours:28s
+/Users/yangkaixuan/opt/anaconda3/envs/py38/bin/python /Users/yangkaixuan/Downloads/SmartGift-main/code/SmartGift.py
+/Users/yangkaixuan/opt/anaconda3/envs/py38/lib/python3.8/site-packages/gensim/utils.py:35: UserWarning: The NumPy module was reloaded (imported a second time). This can in some cases result in small but subtle issues and is discouraged.
+  import numpy as np
+{"name": "wlcontract", "inputs": [], "graph": ""}
+{"name": "name", "inputs": [], "graph": ""}
+{"name": "stop", "inputs": [], "graph": ""}
+{"name": "approve", "inputs": [{"name": "guy", "type": "address"}, {"name": "wad", "type": "uint256"}], "graph": ""}
+trim size: 5
+first level
+here top k: 5
+{"name": "setOwner", "inputs": [{"name": "owner_", "type": "address"}], "graph": ""}
+trim size: 5
+first level
+here top k: 5
+{"name": "totalSupply", "inputs": [], "graph": ""}
+{"name": "transferFrom", "inputs": [{"name": "src", "type": "address"}, {"name": "dst", "type": "address"}, {"name": "wad", "type": "uint256"}], "graph": ""}
+trim size: 5
+first level
+here top k: 5
+{"name": "decimals", "inputs": [], "graph": ""}
+{"name": "push", "inputs": [{"name": "dst", "type": "address"}, {"name": "wad", "type": "uint128"}], "graph": ""}
+trim size: 5
+second level
+here top k: 5
+{"name": "setName", "inputs": [{"name": "name_", "type": "bytes32"}], "graph": ""}
+trim size: 5
+first level
+here top k: 5
+{"name": "mint", "inputs": [{"name": "wad", "type": "uint128"}], "graph": ""}
+trim size: 5
+second level
+here top k: 5
+{"name": "balanceOf", "inputs": [{"name": "src", "type": "address"}], "graph": ""}
+trim size: 5
+first level
+here top k: 5
+{"name": "stopped", "inputs": [], "graph": ""}
+{"name": "setAuthority", "inputs": [{"name": "authority_", "type": "address"}], "graph": ""}
+trim size: 5
+first level
+here top k: 5
+{"name": "pull", "inputs": [{"name": "src", "type": "address"}, {"name": "wad", "type": "uint128"}], "graph": ""}
+trim size: 5
+second level
+here top k: 5
+{"name": "owner", "inputs": [], "graph": ""}
+{"name": "burn", "inputs": [{"name": "wad", "type": "uint128"}], "graph": ""}
+trim size: 5
+second level
+here top k: 5
+{"name": "symbol", "inputs": [], "graph": ""}
+{"name": "transfer", "inputs": [{"name": "dst", "type": "address"}, {"name": "wad", "type": "uint256"}], "graph": ""}
+trim size: 5
+first level
+here top k: 5
+{"name": "start", "inputs": [], "graph": ""}
+{"name": "authority", "inputs": [], "graph": ""}
+{"name": "allowance", "inputs": [{"name": "src", "type": "address"}, {"name": "guy", "type": "address"}], "graph": ""}
+trim size: 5
+second level
+here top k: 5
+time cost is:28 seconds
+
+Process finished with exit code 0
+/Users/yangkaixuan/opt/anaconda3/envs/py38/bin/python /Users/yangkaixuan/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Paper/SmartGift-order/code/SmartGift.py
+/Users/yangkaixuan/opt/anaconda3/envs/py38/lib/python3.8/site-packages/gensim/utils.py:35: UserWarning: The NumPy module was reloaded (imported a second time). This can in some cases result in small but subtle issues and is discouraged.
+  import numpy as np
+{"name": "wlcontract", "inputs": []}
+{"name": "name", "inputs": []}
+{"name": "stop", "inputs": []}
+{"name": "approve", "inputs": [{"name": "guy", "type": "address"}, {"name": "wad", "type": "uint256"}]}
+trim size: 5
+first level
+here top k: 5
+{"name": "setOwner", "inputs": [{"name": "owner_", "type": "address"}]}
+trim size: 5
+first level
+here top k: 5
+{"name": "totalSupply", "inputs": []}
+{"name": "transferFrom", "inputs": [{"name": "src", "type": "address"}, {"name": "dst", "type": "address"}, {"name": "wad", "type": "uint256"}]}
+trim size: 5
+first level
+here top k: 5
+{"name": "decimals", "inputs": []}
+{"name": "push", "inputs": [{"name": "dst", "type": "address"}, {"name": "wad", "type": "uint128"}]}
+trim size: 5
+second level
+here top k: 5
+{"name": "setName", "inputs": [{"name": "name_", "type": "bytes32"}]}
+trim size: 5
+first level
+here top k: 5
+{"name": "mint", "inputs": [{"name": "wad", "type": "uint128"}]}
+trim size: 5
+first level
+here top k: 5
+{"name": "balanceOf", "inputs": [{"name": "src", "type": "address"}]}
+trim size: 5
+first level
+here top k: 5
+{"name": "stopped", "inputs": []}
+{"name": "setAuthority", "inputs": [{"name": "authority_", "type": "address"}]}
+trim size: 5
+first level
+here top k: 5
+{"name": "pull", "inputs": [{"name": "src", "type": "address"}, {"name": "wad", "type": "uint128"}]}
+trim size: 5
+second level
+here top k: 5
+{"name": "owner", "inputs": []}
+{"name": "burn", "inputs": [{"name": "wad", "type": "uint128"}]}
+trim size: 5
+first level
+here top k: 5
+{"name": "symbol", "inputs": []}
+{"name": "transfer", "inputs": [{"name": "dst", "type": "address"}, {"name": "wad", "type": "uint256"}]}
+trim size: 5
+first level
+here top k: 5
+{"name": "start", "inputs": []}
+{"name": "authority", "inputs": []}
+{"name": "allowance", "inputs": [{"name": "src", "type": "address"}, {"name": "guy", "type": "address"}]}
+trim size: 5
+first level
+here top k: 5
+time cost is:61 seconds
+
+Process finished with exit code 0
+
+CF:164s SG:89s Ours:32s
+/Users/yangkaixuan/opt/anaconda3/envs/py38/bin/python /Users/yangkaixuan/Downloads/SmartGift-main/code/SmartGift.py
+/Users/yangkaixuan/opt/anaconda3/envs/py38/lib/python3.8/site-packages/gensim/utils.py:35: UserWarning: The NumPy module was reloaded (imported a second time). This can in some cases result in small but subtle issues and is discouraged.
+  import numpy as np
+{"name": "approve", "inputs": [{"name": "_spender", "type": "address"}, {"name": "_value", "type": "uint256"}], "graph": ""}
+trim size: 5
+first level
+here top k: 5
+{"name": "applySettings", "inputs": [{"name": "qState", "type": "uint8"}, {"name": "_threshold", "type": "uint256"}, {"name": "_rw", "type": "uint256"}, {"name": "_optXferGas", "type": "uint256"}, {"name": "_optFcnGas", "type": "uint256"}], "graph": ""}
+trim size: 5
+second level
+here top k: 5
+{"name": "totalSupply", "inputs": [], "graph": ""}
+{"name": "numToksSwitchedOver", "inputs": [], "graph": ""}
+{"name": "checkDividends", "inputs": [{"name": "_addr", "type": "address"}], "graph": ""}
+trim size: 5
+first level
+here top k: 5
+{"name": "transferFrom", "inputs": [{"name": "_from", "type": "address"}, {"name": "_to", "type": "address"}, {"name": "_value", "type": "uint256"}], "graph": ""}
+trim size: 5
+first level
+here top k: 5
+{"name": "developers", "inputs": [], "graph": ""}
+{"name": "withdrawDividends", "inputs": [], "graph": ""}
+{"name": "decimals", "inputs": [], "graph": ""}
+{"name": "setOpGas", "inputs": [{"name": "_rw", "type": "uint256"}, {"name": "_optXferGas", "type": "uint256"}, {"name": "_optFcnGas", "type": "uint256"}], "graph": ""}
+trim size: 5
+second level
+here top k: 5
+{"name": "TotalFeesReceived", "inputs": [], "graph": ""}
+{"name": "vestTime", "inputs": [], "graph": ""}
+{"name": "rwGas", "inputs": [], "graph": ""}
+{"name": "settingsState", "inputs": [], "graph": ""}
+{"name": "payoutThreshold", "inputs": [], "graph": ""}
+{"name": "balanceOf", "inputs": [{"name": "_owner", "type": "address"}], "graph": ""}
+trim size: 5
+first level
+here top k: 5
+{"name": "optInXferGas", "inputs": [], "graph": ""}
+{"name": "getAccountInfo", "inputs": [{"name": "_addr", "type": "address"}], "graph": ""}
+trim size: 5
+first level
+here top k: 5
+{"name": "numAccounts", "inputs": [], "graph": ""}
+{"name": "owner", "inputs": [], "graph": ""}
+{"name": "symbol", "inputs": [], "graph": ""}
+{"name": "blackHole", "inputs": [], "graph": ""}
+{"name": "changeOwner", "inputs": [{"name": "_addr", "type": "address"}], "graph": ""}
+trim size: 5
+first level
+here top k: 5
+{"name": "transfer", "inputs": [{"name": "_to", "type": "address"}, {"name": "_value", "type": "uint256"}], "graph": ""}
+trim size: 5
+first level
+here top k: 5
+{"name": "setOldE4", "inputs": [{"name": "_oldE4", "type": "address"}, {"name": "_oldE4Recyle", "type": "address"}], "graph": ""}
+trim size: 5
+second level
+here top k: 5
+{"name": "haraKiri", "inputs": [], "graph": ""}
+{"name": "oldE4", "inputs": [], "graph": ""}
+{"name": "optInFcnMinGas", "inputs": [], "graph": ""}
+{"name": "transferDividends", "inputs": [{"name": "_to", "type": "address"}], "graph": ""}
+trim size: 5
+first level
+here top k: 5
+{"name": "allowance", "inputs": [{"name": "_owner", "type": "address"}, {"name": "_spender", "type": "address"}], "graph": ""}
+trim size: 5
+second level
+here top k: 5
+{"name": "oldE4RecycleBin", "inputs": [], "graph": ""}
+{"name": "holdoverBalance", "inputs": [], "graph": ""}
+{"name": "optInFromClassic", "inputs": [], "graph": ""}
+{"name": "setDeveloper", "inputs": [{"name": "_addr", "type": "address"}], "graph": ""}
+trim size: 5
+first level
+here top k: 5
+time cost is:32 seconds
+
+Process finished with exit code 0
+/Users/yangkaixuan/opt/anaconda3/envs/py38/bin/python /Users/yangkaixuan/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Paper/SmartGift-order/code/SmartGift.py
+/Users/yangkaixuan/opt/anaconda3/envs/py38/lib/python3.8/site-packages/gensim/utils.py:35: UserWarning: The NumPy module was reloaded (imported a second time). This can in some cases result in small but subtle issues and is discouraged.
+  import numpy as np
+{"name": "approve", "inputs": [{"name": "_spender", "type": "address"}, {"name": "_value", "type": "uint256"}]}
+trim size: 5
+first level
+here top k: 5
+{"name": "applySettings", "inputs": [{"name": "qState", "type": "uint8"}, {"name": "_threshold", "type": "uint256"}, {"name": "_rw", "type": "uint256"}, {"name": "_optXferGas", "type": "uint256"}, {"name": "_optFcnGas", "type": "uint256"}]}
+trim size: 5
+second level
+here top k: 5
+{"name": "totalSupply", "inputs": []}
+{"name": "numToksSwitchedOver", "inputs": []}
+{"name": "checkDividends", "inputs": [{"name": "_addr", "type": "address"}]}
+trim size: 5
+first level
+here top k: 5
+{"name": "transferFrom", "inputs": [{"name": "_from", "type": "address"}, {"name": "_to", "type": "address"}, {"name": "_value", "type": "uint256"}]}
+trim size: 5
+first level
+here top k: 5
+{"name": "developers", "inputs": []}
+{"name": "withdrawDividends", "inputs": []}
+{"name": "decimals", "inputs": []}
+{"name": "setOpGas", "inputs": [{"name": "_rw", "type": "uint256"}, {"name": "_optXferGas", "type": "uint256"}, {"name": "_optFcnGas", "type": "uint256"}]}
+trim size: 5
+first level
+here top k: 5
+{"name": "TotalFeesReceived", "inputs": []}
+{"name": "vestTime", "inputs": []}
+{"name": "rwGas", "inputs": []}
+{"name": "settingsState", "inputs": []}
+{"name": "payoutThreshold", "inputs": []}
+{"name": "balanceOf", "inputs": [{"name": "_owner", "type": "address"}]}
+trim size: 5
+first level
+here top k: 5
+{"name": "optInXferGas", "inputs": []}
+{"name": "getAccountInfo", "inputs": [{"name": "_addr", "type": "address"}]}
+trim size: 5
+first level
+here top k: 5
+{"name": "numAccounts", "inputs": []}
+{"name": "owner", "inputs": []}
+{"name": "symbol", "inputs": []}
+{"name": "blackHole", "inputs": []}
+{"name": "changeOwner", "inputs": [{"name": "_addr", "type": "address"}]}
+trim size: 5
+first level
+here top k: 5
+{"name": "transfer", "inputs": [{"name": "_to", "type": "address"}, {"name": "_value", "type": "uint256"}]}
+trim size: 5
+first level
+here top k: 5
+{"name": "setOldE4", "inputs": [{"name": "_oldE4", "type": "address"}, {"name": "_oldE4Recyle", "type": "address"}]}
+trim size: 5
+first level
+here top k: 5
+{"name": "haraKiri", "inputs": []}
+{"name": "oldE4", "inputs": []}
+{"name": "optInFcnMinGas", "inputs": []}
+{"name": "transferDividends", "inputs": [{"name": "_to", "type": "address"}]}
+trim size: 5
+first level
+here top k: 5
+{"name": "allowance", "inputs": [{"name": "_owner", "type": "address"}, {"name": "_spender", "type": "address"}]}
+trim size: 5
+first level
+here top k: 5
+{"name": "oldE4RecycleBin", "inputs": []}
+{"name": "holdoverBalance", "inputs": []}
+{"name": "optInFromClassic", "inputs": []}
+{"name": "setDeveloper", "inputs": [{"name": "_addr", "type": "address"}]}
+trim size: 5
+first level
+here top k: 5
+time cost is:89 seconds
+
+Process finished with exit code 0

@@ -1,0 +1,142 @@
+#use docker to communicate the private chain on the computer and test the contract with address
+docker run -e ETHEREUM_NETWORK="http://host.docker.internal:8545" -e CONTRACT_ADDRESS="0xe11a022830d863ce3b34d3816ec6f0898000272e" contractfuzzer/contractfuzzer
+
+docker run -e ETHEREUM_NETWORK="http://host.docker.internal:8545" -e CONTRACT_ADDRESS="0xe11a022830d863ce3b34d3816ec6f0898000272e" contractfuzzer/contractfuzzer
+
+curl http://127.0.0.1:8088/runnerMonitor 0xe662113842a8395677a030d9f85602c5aee5c415 -d 0xe662113842a8395677a030d9f85602c5aee5c415.abi.output.json
+
+/ContractFuzzer # file_content=$(cat  0x10e7f24f79045cfd46d103bbdefa255fc0d47cc6.abi.output.json )
+/ContractFuzzer # apk add jq
+(1/2) Installing oniguruma (6.6.1-r0)
+(2/2) Installing jq (1.5-r5)
+Executing busybox-1.27.2-r7.trigger
+OK: 8 MiB in 19 packages
+/ContractFuzzer # echo "$file_content" > temp_file.json
+/ContractFuzzer # encoded_content=$(jq -sRr @uri < temp_file.json)
+/ContractFuzzer # curl "http://127.0.0.1:8088/runnerMonitor?address= 0xe11a022830d863ce3b34d3816ec6f0898000272e&data=$encoded_content"
+
+curl http://127.0.0.1:8088/runnerMonitor 0xe11a022830d863ce3b34d3816ec6f0898000272e -d 0xe11a022830d863ce3b34d3816ec6f0898000272e.abi.output.json
+
+geth --datadir D:\E\study\papers\codes\MyProjects\EthereumPrivateChain --networkid 15 --http --http.addr "0.0.0.0" --http.port 8545 --http.api eth,net,web3,personal --allow-insecure-unlock --mine --miner.etherbase 0xf7aeB1008503Aac29Cd789CEb0279944b674cC36 console
+
+docker cp D:\E\study\papers\codes\MyProjects\FuzzingwithState\SmartGift-main\code\test\0xe11a022830d863ce3b34d3816ec6f0898000272e.abi.output.json
+curl http://127.0.0.1:8088/runnerMonitor  0x7e18fe622b2405da2a72a6a8df3fcf6768f15e9e -d  0x7e18fe622b2405da2a72a6a8df3fcf6768f15e9e.abi.output.json
+
+# send address and information to runnerMonitor
+address="0x10e7f24f79045cfd46d103bbdefa255fc0d47cc6"
+msg_file="0x10e7f24f79045cfd46d103bbdefa255fc0d47cc6.abi.output.json"
+json_payload=$(jq -n --arg address "$address" --slurpfile msg "$msg_file" '{address: $address, msg: $msg}')
+
+# Send the POST request
+curl -X POST -H "Content-Type: application/json" -d "$json_payload" http://127.0.0.1:8088/runnerMonitor
+
+# Variables
+address="0x10e7f24f79045cfd46d103bbdefa255fc0d47cc6"
+msg_file="0x10e7f24f79045cfd46d103bbdefa255fc0d47cc6.abi.output.json"
+
+# Create a temporary file for the JSON payload
+tmp_json_payload=$(mktemp)
+
+# Construct the JSON payload using jq and store it in the temporary file
+jq -n --arg address "$address" --slurpfile msg "$msg_file" '{address: $address, msg: $msg}' > "$tmp_json_payload"
+
+# Send the POST request using the temporary file
+curl -X POST -H "Content-Type: application/json" -d @"$tmp_json_payload" http://127.0.0.1:8088/runnerMonitor
+
+# Clean up the temporary file
+rm "$tmp_json_payload"
+
+an example of instruction history：
+  72 cd ContractFuzzer
+  73 ls
+  74 ./run.sh --contracts_dir ./examples/exception_disorder
+  75 cd /ContractFuzzer/examples/exception_disorder/fuzzer/reporter
+  76 ls
+  77 cd bug/
+  78 ls
+  79 cat delegate_danger.list
+  80 ls
+  81 cat gasless_send.list
+  82 \
+  83 cat time_dependency.list
+  84 ls
+  85 cd ..
+  86 ks
+  87 cd /ContractFuzzer/
+  88 ls
+  89 bnode
+  90 ls
+  91 cat nohup.out
+  92 ls
+  93 bnode
+  94 ls
+  95 cd Ethereum/
+  96 ls
+  97 cd ..
+  98 ls
+  99 geth
+ 100 ls
+ 101 cd Ethereum/
+ 102 ls
+ 103 cd geth/
+ 104 ls
+ 105 c d..
+ 106 ls
+ 107 cd ..
+ 108 ls
+ 109 cd ..
+ 110 ls
+ 111 cd contract_tester/
+ 112 ls
+ 113 cd /ContractFuzzer && ./run.sh --contracts_dir ./examples/exception_disorder
+ 114 cd ./examples/exception_disorder
+ 115 ls
+ 116 cd fuzzer/
+ 117 l
+ 118 ls
+ 119 cd ..
+ 120 ls
+ 121 cd ..
+ 122 ls
+ 123 cd /ContractFuzzer/
+ 124 ls
+ 125 cd /ContractFuzzer/examples/exception_disorder/fuzzer/reporter
+ 126 ls
+ 127 cdc dbu
+ 128 cd bug/
+ 129 ls
+ 130 cat delegate_danger.list
+ 131 cat time_dependency.list
+ 132 cd ./examples/exception_disorder
+ 133 cd /ContractFuzzer/examples/exception_disorder
+ 134 ls
+ 135 cd fuzzer/
+ 136 ls
+ 137 cd ..
+ 138 ls
+ 139 cd verified_contract_
+ 140 cd verified_contract_sols/
+ 141 ls
+ 142 cat DepositBank.sol
+ 143 cat PassDao.sol
+ 144 ls
+ 145 cd /ContractFuzzer/examples/exception_disorderc
+ 146 cd bu
+ 147 ls
+ 148 cd /ContractFuzzer/examples/exception_disorder/fuzzer/reporter
+ 149 ls
+ 150 cd bug/
+ 151 ls
+ 152 cat reentrancy_danger.list
+ 153 cat number_dependency.list
+ 154 cat exception_disorder.list
+ 155 ls
+ 156 ll
+ 157 cd ..
+ 158 ls
+ 159 ll
+ 160 apk add ll
+ 161 cd bug/
+ 162 ls
+ 163 ls -l
+ 164 history

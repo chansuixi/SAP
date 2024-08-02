@@ -1,0 +1,569 @@
+CF:73s SG:68s Ours:24s
+/Users/yangkaixuan/opt/anaconda3/envs/py38/bin/python /Users/yangkaixuan/Downloads/SmartGift-main/code/SmartGift.py
+/Users/yangkaixuan/opt/anaconda3/envs/py38/lib/python3.8/site-packages/gensim/utils.py:35: UserWarning: The NumPy module was reloaded (imported a second time). This can in some cases result in small but subtle issues and is discouraged.
+  import numpy as np
+Currently, there is no key word call.value
+Currently, there is no key word call.value
+Currently, there is no key word call.value
+Currently, there is no key word call.value
+Currently, there is no key word call.value
+Currently, there is no key word call.value
+Currently, there is no key word call.value
+Currently, there is no key word call.value
+Currently, there is no key word call.value
+Currently, there is no key word call.value
+Currently, there is no key word call.value
+Currently, there is no key word call.value
+Currently, there is no key word call.value
+Currently, there is no key word call.value
+Currently, there is no key word call.value
+Currently, there is no key word call.value
+Currently, there is no key word call.value
+Currently, there is no key word call.value
+Currently, there is no key word call.value
+Currently, there is no key word call.value
+Currently, there is no key word call.value
+{"name": "name", "inputs": [], "graph": ""}
+{"name": "approve", "inputs": [{"name": "_spender", "type": "address"}, {"name": "_value", "type": "uint256"}], "graph": ""}
+trim size: 5
+first level
+here top k: 5
+{"name": "changer", "inputs": [], "graph": ""}
+{"name": "setOwner", "inputs": [{"name": "_newOwner", "type": "address"}], "graph": ""}
+trim size: 5
+first level
+here top k: 5
+{"name": "disableTransfers", "inputs": [{"name": "_disable", "type": "bool"}], "graph": ""}
+trim size: 5
+second level
+here top k: 5
+{"name": "totalSupply", "inputs": [], "graph": ""}
+{"name": "transferFrom", "inputs": [{"name": "_from", "type": "address"}, {"name": "_to", "type": "address"}, {"name": "_value", "type": "uint256"}], "graph": ""}
+trim size: 5
+first level
+here top k: 5
+{"name": "version", "inputs": [], "graph": ""}
+{"name": "standard", "inputs": [], "graph": ""}
+{"name": "setNumDecimalUnits", "inputs": [{"name": "_numDecimalUnits", "type": "uint8"}], "graph": ""}
+trim size: 5
+second level
+here top k: 5
+{"name": "balanceOf", "inputs": [{"name": "", "type": "address"}], "graph": ""}
+trim size: 5
+first level
+here top k: 5
+{"name": "issue", "inputs": [{"name": "_to", "type": "address"}, {"name": "_amount", "type": "uint256"}], "graph": ""}
+trim size: 5
+first level
+here top k: 5
+{"name": "owner", "inputs": [], "graph": ""}
+{"name": "numDecimalUnits", "inputs": [], "graph": ""}
+{"name": "symbol", "inputs": [], "graph": ""}
+{"name": "destroy", "inputs": [{"name": "_from", "type": "address"}, {"name": "_amount", "type": "uint256"}], "graph": ""}
+trim size: 5
+first level
+here top k: 5
+{"name": "transfer", "inputs": [{"name": "_to", "type": "address"}, {"name": "_value", "type": "uint256"}], "graph": ""}
+trim size: 5
+first level
+here top k: 5
+{"name": "events", "inputs": [], "graph": ""}
+{"name": "transfersEnabled", "inputs": [], "graph": ""}
+{"name": "setChanger", "inputs": [{"name": "_changer", "type": "address"}], "graph": ""}
+trim size: 5
+first level
+here top k: 5
+{"name": "allowance", "inputs": [{"name": "", "type": "address"}, {"name": "", "type": "address"}], "graph": ""}
+trim size: 5
+second level
+here top k: 5
+time cost is:24 seconds
+
+Process finished with exit code 0
+/Users/yangkaixuan/opt/anaconda3/envs/py38/bin/python /Users/yangkaixuan/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Paper/SmartGift-order/code/SmartGift.py
+/Users/yangkaixuan/opt/anaconda3/envs/py38/lib/python3.8/site-packages/gensim/utils.py:35: UserWarning: The NumPy module was reloaded (imported a second time). This can in some cases result in small but subtle issues and is discouraged.
+  import numpy as np
+{"name": "name", "inputs": []}
+{"name": "approve", "inputs": [{"name": "_spender", "type": "address"}, {"name": "_value", "type": "uint256"}]}
+trim size: 5
+first level
+here top k: 5
+{"name": "changer", "inputs": []}
+{"name": "setOwner", "inputs": [{"name": "_newOwner", "type": "address"}]}
+trim size: 5
+first level
+here top k: 5
+{"name": "disableTransfers", "inputs": [{"name": "_disable", "type": "bool"}]}
+trim size: 5
+first level
+here top k: 5
+{"name": "totalSupply", "inputs": []}
+{"name": "transferFrom", "inputs": [{"name": "_from", "type": "address"}, {"name": "_to", "type": "address"}, {"name": "_value", "type": "uint256"}]}
+trim size: 5
+first level
+here top k: 5
+{"name": "version", "inputs": []}
+{"name": "standard", "inputs": []}
+{"name": "setNumDecimalUnits", "inputs": [{"name": "_numDecimalUnits", "type": "uint8"}]}
+trim size: 5
+first level
+here top k: 5
+{"name": "balanceOf", "inputs": [{"name": "", "type": "address"}]}
+trim size: 5
+first level
+here top k: 5
+{"name": "issue", "inputs": [{"name": "_to", "type": "address"}, {"name": "_amount", "type": "uint256"}]}
+trim size: 5
+first level
+here top k: 5
+{"name": "owner", "inputs": []}
+{"name": "numDecimalUnits", "inputs": []}
+{"name": "symbol", "inputs": []}
+{"name": "destroy", "inputs": [{"name": "_from", "type": "address"}, {"name": "_amount", "type": "uint256"}]}
+trim size: 5
+first level
+here top k: 5
+{"name": "transfer", "inputs": [{"name": "_to", "type": "address"}, {"name": "_value", "type": "uint256"}]}
+trim size: 5
+first level
+here top k: 5
+{"name": "events", "inputs": []}
+{"name": "transfersEnabled", "inputs": []}
+{"name": "setChanger", "inputs": [{"name": "_changer", "type": "address"}]}
+trim size: 5
+first level
+here top k: 5
+{"name": "allowance", "inputs": [{"name": "", "type": "address"}, {"name": "", "type": "address"}]}
+trim size: 5
+first level
+here top k: 5
+time cost is:68 seconds
+
+Process finished with exit code 0
+
+CF:47s SG:22s Ours:5s
+/Users/yangkaixuan/opt/anaconda3/envs/py38/bin/python /Users/yangkaixuan/Downloads/SmartGift-main/code/SmartGift.py
+/Users/yangkaixuan/opt/anaconda3/envs/py38/lib/python3.8/site-packages/gensim/utils.py:35: UserWarning: The NumPy module was reloaded (imported a second time). This can in some cases result in small but subtle issues and is discouraged.
+  import numpy as np
+Currently, there is no key word call.value
+Currently, there is no key word call.value
+Currently, there is no key word call.value
+Currently, there is no key word call.value
+Currently, there is no key word call.value
+Currently, there is no key word call.value
+Currently, there is no key word call.value
+Currently, there is no key word call.value
+{"name": "setOwner", "inputs": [{"name": "owner_", "type": "address"}], "graph": ""}
+trim size: 5
+first level
+here top k: 5
+{"name": "poke", "inputs": [{"name": "wut", "type": "bytes32"}], "graph": ""}
+trim size: 5
+first level
+here top k: 5
+{"name": "read", "inputs": [], "graph": ""}
+{"name": "peek", "inputs": [], "graph": ""}
+{"name": "setAuthority", "inputs": [{"name": "authority_", "type": "address"}], "graph": ""}
+trim size: 5
+first level
+here top k: 5
+{"name": "owner", "inputs": [], "graph": ""}
+{"name": "void", "inputs": [], "graph": ""}
+{"name": "authority", "inputs": [], "graph": ""}
+time cost is:5 seconds
+
+Process finished with exit code 0
+
+
+CF:74s SG:131s Ours:80s
+/Users/yangkaixuan/opt/anaconda3/envs/py38/bin/python /Users/yangkaixuan/Downloads/SmartGift-main/code/SmartGift.py
+/Users/yangkaixuan/opt/anaconda3/envs/py38/lib/python3.8/site-packages/gensim/utils.py:35: UserWarning: The NumPy module was reloaded (imported a second time). This can in some cases result in small but subtle issues and is discouraged.
+  import numpy as np
+Currently, there is no key word call.value
+Currently, there is no key word call.value
+Currently, there is no key word call.value
+Currently, there is no key word call.value
+Currently, there is no key word call.value
+Currently, there is no key word call.value
+Currently, there is no key word call.value
+Currently, there is no key word call.value
+Currently, there is no key word call.value
+Currently, there is no key word call.value
+Currently, there is no key word call.value
+Currently, there is no key word call.value
+Currently, there is no key word call.value
+Currently, there is no key word call.value
+Currently, there is no key word call.value
+Currently, there is no key word call.value
+Currently, there is no key word call.value
+Currently, there is no key word call.value
+Currently, there is no key word call.value
+Currently, there is no key word call.value
+{"name": "setOwner", "inputs": [{"name": "owner_", "type": "address"}], "graph": ""}
+trim size: 5
+first level
+here top k: 5
+{"name": "poke", "inputs": [{"name": "", "type": "bytes32"}], "graph": ""}
+trim size: 5
+first level
+here top k: 5
+{"name": "poke", "inputs": [], "graph": ""}
+{"name": "compute", "inputs": [], "graph": ""}
+{"name": "set", "inputs": [{"name": "wat", "type": "address"}], "graph": ""}
+trim size: 5
+first level
+here top k: 5
+{"name": "unset", "inputs": [{"name": "wat", "type": "address"}], "graph": ""}
+trim size: 5
+first level
+here top k: 5
+{"name": "indexes", "inputs": [{"name": "", "type": "address"}], "graph": ""}
+trim size: 5
+first level
+here top k: 5
+{"name": "next", "inputs": [], "graph": ""}
+{"name": "read", "inputs": [], "graph": ""}
+{"name": "peek", "inputs": [], "graph": ""}
+{"name": "values", "inputs": [{"name": "", "type": "bytes12"}], "graph": ""}
+trim size: 5
+fourth_level
+here top k: 5
+{"name": "setMin", "inputs": [{"name": "min_", "type": "uint96"}], "graph": ""}
+trim size: 5
+second level
+here top k: 5
+{"name": "setAuthority", "inputs": [{"name": "authority_", "type": "address"}], "graph": ""}
+trim size: 5
+first level
+here top k: 5
+{"name": "owner", "inputs": [], "graph": ""}
+{"name": "void", "inputs": [], "graph": ""}
+{"name": "set", "inputs": [{"name": "pos", "type": "bytes12"}, {"name": "wat", "type": "address"}], "graph": ""}
+trim size: 5
+fourth_level
+here top k: 5
+{"name": "authority", "inputs": [], "graph": ""}
+{"name": "unset", "inputs": [{"name": "pos", "type": "bytes12"}], "graph": ""}
+trim size: 5
+fourth_level
+here top k: 5
+{"name": "setNext", "inputs": [{"name": "next_", "type": "bytes12"}], "graph": ""}
+trim size: 5
+fourth_level
+here top k: 5
+{"name": "min", "inputs": [], "graph": ""}
+time cost is:80 seconds
+
+Process finished with exit code 0
+/Users/yangkaixuan/opt/anaconda3/envs/py38/bin/python /Users/yangkaixuan/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Paper/SmartGift-order/code/SmartGift.py
+/Users/yangkaixuan/opt/anaconda3/envs/py38/lib/python3.8/site-packages/gensim/utils.py:35: UserWarning: The NumPy module was reloaded (imported a second time). This can in some cases result in small but subtle issues and is discouraged.
+  import numpy as np
+{"name": "setOwner", "inputs": [{"name": "owner_", "type": "address"}]}
+trim size: 5
+first level
+here top k: 5
+{"name": "poke", "inputs": [{"name": "", "type": "bytes32"}]}
+trim size: 5
+first level
+here top k: 5
+{"name": "poke", "inputs": []}
+{"name": "compute", "inputs": []}
+{"name": "set", "inputs": [{"name": "wat", "type": "address"}]}
+trim size: 5
+first level
+here top k: 5
+{"name": "unset", "inputs": [{"name": "wat", "type": "address"}]}
+trim size: 5
+first level
+here top k: 5
+{"name": "indexes", "inputs": [{"name": "", "type": "address"}]}
+trim size: 5
+first level
+here top k: 5
+{"name": "next", "inputs": []}
+{"name": "read", "inputs": []}
+{"name": "peek", "inputs": []}
+{"name": "values", "inputs": [{"name": "", "type": "bytes12"}]}
+trim size: 5
+third level
+here top k: 5
+{"name": "setMin", "inputs": [{"name": "min_", "type": "uint96"}]}
+trim size: 5
+second level
+here top k: 5
+{"name": "setAuthority", "inputs": [{"name": "authority_", "type": "address"}]}
+trim size: 5
+first level
+here top k: 5
+{"name": "owner", "inputs": []}
+{"name": "void", "inputs": []}
+{"name": "set", "inputs": [{"name": "pos", "type": "bytes12"}, {"name": "wat", "type": "address"}]}
+trim size: 5
+third level
+here top k: 5
+{"name": "authority", "inputs": []}
+{"name": "unset", "inputs": [{"name": "pos", "type": "bytes12"}]}
+trim size: 5
+third level
+here top k: 5
+{"name": "setNext", "inputs": [{"name": "next_", "type": "bytes12"}]}
+trim size: 5
+third level
+here top k: 5
+{"name": "min", "inputs": []}
+time cost is:131 seconds
+
+Process finished with exit code 0
+
+CF:54s SG:64s Ours:21s
+/Users/yangkaixuan/opt/anaconda3/envs/py38/bin/python /Users/yangkaixuan/Downloads/SmartGift-main/code/SmartGift.py
+/Users/yangkaixuan/opt/anaconda3/envs/py38/lib/python3.8/site-packages/gensim/utils.py:35: UserWarning: The NumPy module was reloaded (imported a second time). This can in some cases result in small but subtle issues and is discouraged.
+  import numpy as np
+Currently, there is no key word call.value
+Currently, there is no key word call.value
+Currently, there is no key word call.value
+Currently, there is no key word call.value
+Currently, there is no key word call.value
+Currently, there is no key word call.value
+Currently, there is no key word call.value
+Currently, there is no key word call.value
+Currently, there is no key word call.value
+Currently, there is no key word call.value
+Currently, there is no key word call.value
+Currently, there is no key word call.value
+Currently, there is no key word call.value
+Currently, there is no key word call.value
+Currently, there is no key word call.value
+{"name": "name", "inputs": [], "graph": ""}
+{"name": "approve", "inputs": [{"name": "_spender", "type": "address"}, {"name": "_value", "type": "uint256"}], "graph": ""}
+trim size: 5
+first level
+here top k: 5
+{"name": "totalSupply", "inputs": [], "graph": ""}
+{"name": "transferFrom", "inputs": [{"name": "_from", "type": "address"}, {"name": "_to", "type": "address"}, {"name": "_value", "type": "uint256"}], "graph": ""}
+trim size: 5
+first level
+here top k: 5
+{"name": "decimals", "inputs": [], "graph": ""}
+{"name": "MAX_UINT256", "inputs": [], "graph": ""}
+{"name": "unblockAccount", "inputs": [{"name": "_account", "type": "address"}], "graph": ""}
+trim size: 5
+first level
+here top k: 5
+{"name": "balanceOf", "inputs": [{"name": "_owner", "type": "address"}], "graph": ""}
+trim size: 5
+first level
+here top k: 5
+{"name": "blockAccount", "inputs": [{"name": "_account", "type": "address"}], "graph": ""}
+trim size: 5
+first level
+here top k: 5
+{"name": "symbol", "inputs": [], "graph": ""}
+{"name": "transfer", "inputs": [{"name": "_to", "type": "address"}, {"name": "_value", "type": "uint256"}], "graph": ""}
+trim size: 5
+first level
+here top k: 5
+{"name": "transfer", "inputs": [{"name": "_to", "type": "address"}, {"name": "_value", "type": "uint256"}, {"name": "_metadata", "type": "bytes"}], "graph": ""}
+trim size: 5
+second level
+here top k: 5
+{"name": "secretaryGeneral", "inputs": [], "graph": ""}
+{"name": "isAccountBlocked", "inputs": [{"name": "_account", "type": "address"}], "graph": ""}
+trim size: 5
+first level
+here top k: 5
+{"name": "allowance", "inputs": [{"name": "_owner", "type": "address"}, {"name": "_spender", "type": "address"}], "graph": ""}
+trim size: 5
+second level
+here top k: 5
+time cost is:21 seconds
+
+Process finished with exit code 0
+/Users/yangkaixuan/opt/anaconda3/envs/py38/bin/python /Users/yangkaixuan/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Paper/SmartGift-order/code/SmartGift.py
+/Users/yangkaixuan/opt/anaconda3/envs/py38/lib/python3.8/site-packages/gensim/utils.py:35: UserWarning: The NumPy module was reloaded (imported a second time). This can in some cases result in small but subtle issues and is discouraged.
+  import numpy as np
+{"name": "name", "inputs": []}
+{"name": "approve", "inputs": [{"name": "_spender", "type": "address"}, {"name": "_value", "type": "uint256"}]}
+trim size: 5
+first level
+here top k: 5
+{"name": "totalSupply", "inputs": []}
+{"name": "transferFrom", "inputs": [{"name": "_from", "type": "address"}, {"name": "_to", "type": "address"}, {"name": "_value", "type": "uint256"}]}
+trim size: 5
+first level
+here top k: 5
+{"name": "decimals", "inputs": []}
+{"name": "MAX_UINT256", "inputs": []}
+{"name": "unblockAccount", "inputs": [{"name": "_account", "type": "address"}]}
+trim size: 5
+first level
+here top k: 5
+{"name": "balanceOf", "inputs": [{"name": "_owner", "type": "address"}]}
+trim size: 5
+first level
+here top k: 5
+{"name": "blockAccount", "inputs": [{"name": "_account", "type": "address"}]}
+trim size: 5
+first level
+here top k: 5
+{"name": "symbol", "inputs": []}
+{"name": "transfer", "inputs": [{"name": "_to", "type": "address"}, {"name": "_value", "type": "uint256"}]}
+trim size: 5
+first level
+here top k: 5
+{"name": "transfer", "inputs": [{"name": "_to", "type": "address"}, {"name": "_value", "type": "uint256"}, {"name": "_metadata", "type": "bytes"}]}
+trim size: 5
+first level
+here top k: 5
+{"name": "secretaryGeneral", "inputs": []}
+{"name": "isAccountBlocked", "inputs": [{"name": "_account", "type": "address"}]}
+trim size: 5
+first level
+here top k: 5
+{"name": "allowance", "inputs": [{"name": "_owner", "type": "address"}, {"name": "_spender", "type": "address"}]}
+trim size: 5
+first level
+here top k: 5
+time cost is:64 seconds
+
+Process finished with exit code 0
+
+CF:102s SG:100s Ours:32s
+/Users/yangkaixuan/opt/anaconda3/envs/py38/bin/python /Users/yangkaixuan/Downloads/SmartGift-main/code/SmartGift.py
+/Users/yangkaixuan/opt/anaconda3/envs/py38/lib/python3.8/site-packages/gensim/utils.py:35: UserWarning: The NumPy module was reloaded (imported a second time). This can in some cases result in small but subtle issues and is discouraged.
+  import numpy as np
+Currently, there is no key word call.value
+Currently, there is no key word call.value
+Currently, there is no key word call.value
+Currently, there is no key word call.value
+Currently, there is no key word call.value
+Currently, there is no key word call.value
+Currently, there is no key word call.value
+Currently, there is no key word call.value
+Currently, there is no key word call.value
+Currently, there is no key word call.value
+Currently, there is no key word call.value
+Currently, there is no key word call.value
+Currently, there is no key word call.value
+Currently, there is no key word call.value
+Currently, there is no key word call.value
+Currently, there is no key word call.value
+Currently, there is no key word call.value
+Currently, there is no key word call.value
+{"name": "removeOwner", "inputs": [{"name": "_owner", "type": "address"}], "graph": ""}
+trim size: 5
+first level
+here top k: 5
+{"name": "isOwner", "inputs": [{"name": "_addr", "type": "address"}], "graph": ""}
+trim size: 5
+first level
+here top k: 5
+{"name": "m_numOwners", "inputs": [], "graph": ""}
+{"name": "m_lastDay", "inputs": [], "graph": ""}
+{"name": "resetSpentToday", "inputs": [], "graph": ""}
+{"name": "m_spentToday", "inputs": [], "graph": ""}
+{"name": "addOwner", "inputs": [{"name": "_owner", "type": "address"}], "graph": ""}
+trim size: 5
+first level
+here top k: 5
+{"name": "m_required", "inputs": [], "graph": ""}
+{"name": "confirm", "inputs": [{"name": "_h", "type": "bytes32"}], "graph": ""}
+trim size: 5
+first level
+here top k: 5
+{"name": "setDailyLimit", "inputs": [{"name": "_newLimit", "type": "uint256"}], "graph": ""}
+trim size: 5
+first level
+here top k: 5
+{"name": "execute", "inputs": [{"name": "_to", "type": "address"}, {"name": "_value", "type": "uint256"}, {"name": "_data", "type": "bytes"}], "graph": ""}
+trim size: 5
+second level
+here top k: 5
+{"name": "revoke", "inputs": [{"name": "_operation", "type": "bytes32"}], "graph": ""}
+trim size: 5
+first level
+here top k: 5
+{"name": "changeRequirement", "inputs": [{"name": "_newRequired", "type": "uint256"}], "graph": ""}
+trim size: 5
+first level
+here top k: 5
+{"name": "hasConfirmed", "inputs": [{"name": "_operation", "type": "bytes32"}, {"name": "_owner", "type": "address"}], "graph": ""}
+trim size: 5
+second level
+here top k: 5
+{"name": "getOwner", "inputs": [{"name": "ownerIndex", "type": "uint256"}], "graph": ""}
+trim size: 5
+first level
+here top k: 5
+{"name": "kill", "inputs": [{"name": "_to", "type": "address"}], "graph": ""}
+trim size: 5
+first level
+here top k: 5
+{"name": "changeOwner", "inputs": [{"name": "_from", "type": "address"}, {"name": "_to", "type": "address"}], "graph": ""}
+trim size: 5
+second level
+here top k: 5
+{"name": "m_dailyLimit", "inputs": [], "graph": ""}
+time cost is:32 seconds
+
+Process finished with exit code 0
+/Users/yangkaixuan/opt/anaconda3/envs/py38/bin/python /Users/yangkaixuan/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Paper/SmartGift-order/code/SmartGift.py
+/Users/yangkaixuan/opt/anaconda3/envs/py38/lib/python3.8/site-packages/gensim/utils.py:35: UserWarning: The NumPy module was reloaded (imported a second time). This can in some cases result in small but subtle issues and is discouraged.
+  import numpy as np
+{"name": "removeOwner", "inputs": [{"name": "_owner", "type": "address"}]}
+trim size: 5
+first level
+here top k: 5
+{"name": "isOwner", "inputs": [{"name": "_addr", "type": "address"}]}
+trim size: 5
+first level
+here top k: 5
+{"name": "m_numOwners", "inputs": []}
+{"name": "m_lastDay", "inputs": []}
+{"name": "resetSpentToday", "inputs": []}
+{"name": "m_spentToday", "inputs": []}
+{"name": "addOwner", "inputs": [{"name": "_owner", "type": "address"}]}
+trim size: 5
+first level
+here top k: 5
+{"name": "m_required", "inputs": []}
+{"name": "confirm", "inputs": [{"name": "_h", "type": "bytes32"}]}
+trim size: 5
+first level
+here top k: 5
+{"name": "setDailyLimit", "inputs": [{"name": "_newLimit", "type": "uint256"}]}
+trim size: 5
+first level
+here top k: 5
+{"name": "execute", "inputs": [{"name": "_to", "type": "address"}, {"name": "_value", "type": "uint256"}, {"name": "_data", "type": "bytes"}]}
+trim size: 5
+first level
+here top k: 5
+{"name": "revoke", "inputs": [{"name": "_operation", "type": "bytes32"}]}
+trim size: 5
+first level
+here top k: 5
+{"name": "changeRequirement", "inputs": [{"name": "_newRequired", "type": "uint256"}]}
+trim size: 5
+first level
+here top k: 5
+{"name": "hasConfirmed", "inputs": [{"name": "_operation", "type": "bytes32"}, {"name": "_owner", "type": "address"}]}
+trim size: 5
+first level
+here top k: 5
+{"name": "getOwner", "inputs": [{"name": "ownerIndex", "type": "uint256"}]}
+trim size: 5
+first level
+here top k: 5
+{"name": "kill", "inputs": [{"name": "_to", "type": "address"}]}
+trim size: 5
+first level
+here top k: 5
+{"name": "changeOwner", "inputs": [{"name": "_from", "type": "address"}, {"name": "_to", "type": "address"}]}
+trim size: 5
+first level
+here top k: 5
+{"name": "m_dailyLimit", "inputs": []}
+time cost is:100 seconds
+
+Process finished with exit code 0

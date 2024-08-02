@@ -1,0 +1,402 @@
+import json
+import sys
+import re
+import datetime
+from string import digits
+from gensim import corpora, models, similarities
+from gensim.models import Doc2Vec
+from bert_serving.client import BertClient
+from crawl import CrawlContractGraphByFunctionName
+from transformers import AlbertTokenizer, AlbertModel
+import torch
+from sklearn.metrics.pairwise import cosine_similarity
+from nltk.tokenize import word_tokenize
+import numpy as np
+from transformers import BertTokenizer, BertModel
+import os
+
+
+import nltk
+import nltk.tokenize as tk
+from nltk.tokenize import word_tokenize
+
+TaggededDocument = models.doc2vec.TaggedDocument
+
+def process_bytes(s):
+    s = json.loads(json.dumps(s))
+    if type(s) is dict:
+        data = s['data']
+        hexstr = "0x"
+        for idx in range(len(data)):
+            ele = "{:02x}".format(data[idx])
+            hexstr = hexstr + ele
+        return hexstr
+    else:
+        hexstrings = []
+        for item in s:
+            hexstrings.append(process_bytes(item))
+        return hexstrings
+
+# give a file with the contract abi, extract all the function information
+# from the abi file
+def read_targets_from_abi(filepath):
+    funcs_in_abi = []
+    with open(filepath) as fp:
+        abi = fp.read()
+        abi_json = json.loads(abi)
+        for single_func in abi_json:
+            if single_func["type"] == "function":
+                fun_sig = {"name" : single_func["name"], "inputs" : single_func["inputs"]}
+                funcs_in_abi.append(json.dumps(fun_sig))
+    return funcs_in_abi
+
+# read the database functions from the json file
+def read_funcdef_from_file(filename):
+    func_list = []
+    input_list = []
+    with open(filename) as fp:
+        file = fp.read()
+        json_file_list = json.loads(file)
+        for i in range(len(json_file_list)):
+            func_list.append(json_file_list[i]['function'])
+            input_list.append(json_file_list[i]['inputs'])
+
+    #res_list = process_functions(func_list)
+    return func_list, input_list
+
+# the input is from the contractFuzzer, randomly choosed function definition
+def process_input(input):
+    input_type_list = []
+    graph_list = []
+    test_str = ''
+    json_input = json.loads(input)
+    test_str += process_name(json_input["name"]) + ' '
+    for item in json_input["inputs"]:
+        test_str += item["type"] + ' '
+        input_type_list.append(item["type"])
+    if json_input["graph"] == "":
+        return test_str, input_type_list, [], json_input['param']
+    for item in json_input["graph"].split(","):
+        test_str += item + ' '
+        graph_list.append(item)
+    return test_str, input_type_list, graph_list, json_input['param']
+
+# process the function definion to the string format
+# the format like: functionName param1 type1 param2 type2 ....
+### funclist: all function names and parameters
+### input_type_list :the input of the target function
+### input_list :inputs from all contracts
+
+import ast
+def process_functions(funclist, input_type_list, input_list, graph_list, k):
+    func_def_list = []
+    param_def_list = []
+    # print(funclist)
+    funclist, inputlist, level= trim_func(funclist, input_type_list, input_list,graph_list, k)
+    for i in range(len(funclist)):
+        # cur_func = json.loads(funclist[i])
+        func_str = ''
+        func_str += process_name(funclist[i]["method"]) + ' '
+        for j in range(len(funclist[i]["types"])):
+            func_str += funclist[i]["types"][j] + ' '
+        graph = funclist[i]["graph"]
+        if graph != "":
+            for g in range(len(funclist[i]["graph"].split(","))):
+                func_str += funclist[i]["graph"].split(",")[g] + ' '
+        func_def_list.append(func_str)
+        param_def_list.append(ast.literal_eval(funclist[i]['param']))
+    return func_def_list, param_def_list,  funclist, inputlist, level
+
+# choose the functions that exist the type info
+def trim_func(func_list, input_type_list, input_list,graph_list, k):
+    print("trim size: " + str(k)) 
+    level = 'first_level'
+    first_level = []
+    first_level_input = []
+    second_level = []
+    second_level_input = []
+    third_level = []
+    third_level_input = []
+    remove_digits = str.maketrans('', '', digits)
+
+    for i in range(len(func_list)):
+        graph_json = func_list[i]["graph"]
+        if graph_json == "":
+            graph_json = []
+        else:
+            graph_json = graph_json.split(",")
+        if graph_json != graph_list:
+            continue
+        else:
+            type_json = func_list[i]["types"]
+            if(len(type_json) != len(input_type_list)):
+                continue
+            have_set = []
+            types_are_all_exist = 0
+            for input_type in input_type_list:
+                # input_type = str(input_type).split('[')[0].translate(remove_digits)
+                input_type = str(input_type).split('[')[0]
+                for j in range(len(type_json)):
+                    # func_type = str(type_json[j]).split('[')[0].translate(remove_digits)
+                    func_type = str(type_json[j]).split('[')[0]
+                    if func_type == input_type and (j not in have_set):
+                        types_are_all_exist += 1
+                        have_set.append(j)
+                        break
+            if types_are_all_exist == len(input_type_list):
+                first_level.append(func_list[i])
+                first_level_input.append(input_list[i])
+
+
+    # process the second level functions
+    # every type must exist,but graph could not same
+    for i in range(len(func_list)):
+        type_json = func_list[i]["types"]
+        graph_json = func_list[i]["graph"]
+        if graph_json == "":
+            graph_json = []
+        else:
+            graph_json = graph_json.split(",")
+        have_set = []
+        types_are_all_exist = 0
+        for input_type in input_type_list:
+            # input_type = str(input_type).split('[')[0].translate(remove_digits)
+            input_type = str(input_type).split('[')[0]
+            for j in range(len(type_json)):
+                # func_type = str(type_json[j]).split('[')[0].translate(remove_digits)
+                func_type = str(type_json[j]).split('[')[0]
+                if func_type == input_type and (j not in have_set):
+                    types_are_all_exist += 1
+                    have_set.append(j)
+                    break
+        if types_are_all_exist == len(input_type_list): 
+            second_level.append(func_list[i])
+            second_level_input.append(input_list[i])
+        if (types_are_all_exist != len(input_type_list)) or len(graph_json) > 0 and len(graph_list) > 0 and graph_json == graph_list:
+            have_set_temp = []
+            types_are_all_exist_temp = 0
+            for input_type in input_type_list:
+                input_type = str(input_type).split('[')[0]
+                if len(re.findall("\d+", str(input_type).split('[')[0])) > 0:
+                    input_type_num = int(re.findall("\d+", str(input_type).split('[')[0])[0])
+                else:
+                    input_type_num = 256
+                for j in range(len(type_json)):
+                    func_type = str(type_json[j]).split('[')[0]
+                    if len(re.findall("\d+", str(type_json[j]).split('[')[0])) > 0:
+                        func_type_num = int(re.findall("\d+", str(type_json[j]).split('[')[0])[0])
+                    else:
+                        func_type_num = 256
+                    if func_type == input_type and (j not in have_set_temp) and input_type_num >= func_type_num:
+                        types_are_all_exist_temp += 1
+                        have_set_temp.append(j)
+                        break
+                    # not very restrict
+                    elif (("int" in func_type and "int" in input_type) or (
+                            "byte" in func_type and "byte" in input_type)) and input_type_num >= func_type_num and (
+                            j not in have_set_temp):
+                        types_are_all_exist_temp += 1
+                        have_set.append(j)
+                        break
+            if types_are_all_exist_temp == len(input_type_list):
+                second_level.append(func_list[i])
+                second_level_input.append(input_list[i])
+
+    # process the third level functions
+    # second level means almost the same
+    for i in range(len(func_list)):
+        type_json = func_list[i]["types"]
+        have_set = []
+        types_are_all_exist = 0
+        for input_type in input_type_list:
+            input_type = str(input_type).split('[')[0]
+            if len(re.findall("\d+", str(input_type).split('[')[0])) > 0:
+                input_type_num = int(re.findall("\d+", str(input_type).split('[')[0])[0])
+            else:
+                input_type_num = 256
+            for j in range(len(type_json)):
+                func_type = str(type_json[j]).split('[')[0]
+                if len(re.findall("\d+", str(type_json[j]).split('[')[0])) > 0:
+                    func_type_num = int(re.findall("\d+", str(type_json[j]).split('[')[0])[0])
+                else:
+                    func_type_num = 256
+                if func_type == input_type and (j not in have_set) and input_type_num >= func_type_num:
+                    types_are_all_exist += 1
+                    have_set.append(j)
+                    break
+                # not very restrict
+                elif (("int" in func_type and "int" in input_type) or ("byte" in func_type and "byte" in input_type)) and input_type_num >= func_type_num and (j not in have_set):
+                    types_are_all_exist += 1
+                    have_set.append(j)
+                    break
+        if types_are_all_exist == len(input_type_list):
+            third_level.append(func_list[i])
+            third_level_input.append(input_list[i])
+
+    if len(first_level) < k:
+        if len(second_level) < k:
+            if len(third_level) < k:
+                level = "fourth_level"
+                print("fourth_level")
+                return func_list, input_list, level
+            else:
+                level = "third_level"
+                print("third level")
+                return third_level,third_level_input, level
+        else:
+            level = "second_level"
+            print("second level")
+            return second_level, second_level_input, level
+    print("first level")
+    return first_level,first_level_input,level
+
+# process the function name, such as aaaBaa
+def process_name(methodname):
+    name_str = ''
+    last_name = str(methodname)
+    for i in range(len(last_name)):
+        if (last_name[i] <= 'z' and last_name[i] >= 'a') or (last_name[i] <= '9' and last_name[i] >= '0'):
+            name_str += last_name[i]
+        elif last_name[i] <= 'Z' and last_name[i] >= 'A':
+            name_str += ' ' + last_name[i].lower()
+        elif last_name[i] == '_':
+            name_str += ' '
+    return name_str
+
+
+# using ALBERT
+# in theory should divide into four level
+def train_and_get_similarity(wordlist, test):
+    model_name = 'albert-base-v2'
+    tokenizer = AlbertTokenizer.from_pretrained(model_name)
+    model = AlbertModel.from_pretrained(model_name)
+    def encode_text(text):
+        tokens = tokenizer(text, return_tensors='pt', padding=True, truncation=True)
+        with torch.no_grad():
+            outputs = model(**tokens)
+        return outputs.last_hidden_state.mean(dim=1).numpy()
+    test_vec = encode_text(test)
+    sample_vec = np.vstack([encode_text(item) for item in wordlist])
+    sim = cosine_similarity(sample_vec, test_vec.reshape(1, -1))
+    final_sim = [item[0] for item in sim]
+    return final_sim
+
+
+# from the calculated similarity to choose the top similar definition
+def choose_topk_input(similarity, k): 
+    print("here top k: " + str(k))
+    tmp_similarity = []
+    for i in range(len(similarity)):
+        tmp_similarity.append((i, similarity[i]))
+
+    choice = sorted(tmp_similarity, key=lambda x:x[1], reverse=True)
+    return choice[0:k]
+
+# output to the seed file based on different type
+# just like the format as the initial seed file
+def output(topk, func_list, input_list, target_input, level):
+    target_input_json = json.loads(target_input)
+    target_func = target_input_json["name"]
+    remove_digits = str.maketrans('', '', digits)
+    input_pool = []
+    # target_input means the function which we want to get the input
+    cnt = 0
+    for idx,_ in topk:
+        similar_func = func_list[idx]
+        similar_inputs = input_list[idx]
+        input_pool.append({"similar_func" : similar_func, "inputs": []})
+        for item in similar_inputs:
+            input_pool[cnt]["inputs"].append(item)
+        cnt+=1
+
+    # determine a path to output
+    return {"func": target_input_json, "func_inputs": input_pool}
+
+
+
+        
+
+def main():
+
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+
+   # Construct the file paths relative to the script directory
+    filepath = os.path.join(script_dir, "test/0x10e7f24f79045cfd46d103bbdefa255fc0d47cc6.abi") #the abi of smart contract to test
+    sourceCodePath = os.path.join(script_dir, "test/0x10e7f24f79045cfd46d103bbdefa255fc0d47cc6.sol") #the source code
+    samplepath = os.path.join(script_dir, "crawl/samples/testforconstant/sample1.json") #the inputs sampled from similar funtions
+    outputpath = os.path.join(script_dir, "test")
+
+    k = 1
+
+    word_list,input_list = read_funcdef_from_file(samplepath)  # getSample.py generate file
+    #print the length of functions and inputs, just for test
+    print("the length of the function in the sample file is" , len(word_list))
+    print("show all the functions in the crawled sample file", word_list)
+    print("the length of the inputs in the sample file is" , len(input_list))
+
+    
+    
+    # target_functions is composed of all the funtions in the target smart contract abi
+    # {"name" : name, "inputs" : [{"name" : inputname, "type" : type}]}
+    target_functions = read_targets_from_abi(filepath)
+
+    for i in range(len(target_functions)):
+        item_json = json.loads(target_functions[i])
+        func_name = item_json["name"]
+        red_sig, param_list = CrawlContractGraphByFunctionName.generate_graph(sourceCodePath, func_name)
+        item_json["graph"] = red_sig
+        item_json["param"] = param_list
+        target_functions[i] = json.dumps(item_json)
+
+    file_output = []
+    starttime = datetime.datetime.now()
+    for item in target_functions:
+        print("output is here:", item)
+        # test_word is a sentence with functionname, inputname and inputtype
+        # funcName type1 inputName1 type2 inputName2 ... 
+        # input_type_list is all the types in target_function
+        test_word, input_type_list, graph_list, param_used_list = process_input(item)
+        if(len(input_type_list) == 0):
+            file_output.append(output([], [], [], item, "no_level")) # if no inputs
+            continue
+
+        final_word_list, final_param_list, final_func_list, final_input_list, level = process_functions(word_list, input_type_list, input_list, graph_list, k)
+        sim_matrix = train_and_get_similarity(final_word_list, test_word)
+
+        if len(final_word_list) == 1:
+            topk_list = choose_topk_input(sim_matrix, k)
+            file_output.append(output(topk_list, final_func_list, final_input_list, item, level))
+            continue
+
+
+        final_word_list_tmp = []
+        for i in range(len(final_word_list)):
+            cur_param_list = final_param_list[i]
+            if len(param_used_list) == len(cur_param_list):
+                for i in range(len(param_used_list)):
+                    cur_param = param_used_list[i]
+                    cur_param_type = cur_param.split('\t')[0]
+                    cur_dst_param = cur_param_list[0].split('\t')[0]
+                    if cur_param_type == cur_dst_param :
+                        final_word_list_tmp.append(final_word_list[i])
+
+        if len(final_word_list_tmp) > 0:
+            sim_matrix = train_and_get_similarity(final_word_list_tmp, test_word)
+            topk_list = choose_topk_input(sim_matrix, k)
+            file_output.append(output(topk_list, final_func_list, final_input_list, item, level))
+            continue
+        topk_list = choose_topk_input(sim_matrix, k)
+        file_output.append(output(topk_list, final_func_list, final_input_list, item, level))
+
+    endtime = datetime.datetime.now()
+    print("time cost is:" + str((endtime - starttime).seconds) + " seconds")
+
+    target_abi = filepath.split('/')[-1]
+    with open(outputpath + '/' + target_abi +".output.json", "w+") as fp:
+        fp.write(json.dumps(file_output))
+        fp.close()
+
+if __name__ == '__main__':
+    main()
+    exit(0)
+

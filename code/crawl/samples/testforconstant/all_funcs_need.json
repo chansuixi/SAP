@@ -1,0 +1,1 @@
+[{"function":{"constant":false,"inputs":[{"name":"to","type":"address"},{"name":"tokens","type":"uint256"}],"name":"transfer","outputs":[{"name":"success","type":"bool"}],"payable":false,"stateMutability":"nonpayable","type":"function"},"input":["2cdbc06c0b7bbcf48a94e6866d80560510354f7c","24000000000"],"graph":"","param":"['mapping\\tbalances']"}]
